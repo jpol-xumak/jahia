@@ -76,6 +76,22 @@
       <url>https://devtools.jahia.com/nexus/content/groups/public</url>
     </repository>
   </repositories>
+<profiles>
+  <profile>
+      <id>jahia-server-sosa</id>
+      <properties>
+          <jahia.deploy.targetServerType>tomcat</jahia.deploy.targetServerType>
+          <jahia.deploy.targetServerVersion>7</jahia.deploy.targetServerVersion>
+          <jahia.deploy.targetServerDirectory>/Users/isosa/isosa/projects/jahia/DEM-ED-SDK/tomcat</jahia.deploy.targetServerDirectory>
+          <jahia.deploy.war.dirName>ROOT</jahia.deploy.war.dirName>
+          <jahia.deploy.war.contextPath>/</jahia.deploy.war.contextPath>
+          <jahia.deploy.war.servletPath>/cms</jahia.deploy.war.servletPath>
+          <jahia.debug.address>socket:hostname=10.4.10.20,port=8000</jahia.debug.address>
+      </properties>
+  </profile>
+</profiles>
+
+
   <build>
     <plugins>
       <plugin>
