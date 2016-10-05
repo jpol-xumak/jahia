@@ -94,16 +94,52 @@
       <properties>
           <jahia.deploy.targetServerType>tomcat</jahia.deploy.targetServerType>
           <jahia.deploy.targetServerVersion>7</jahia.deploy.targetServerVersion>
-          <!--
+
           <jahia.deploy.targetServerDirectory>/Users/jpol/Documents/WORK/JAHIA/DigitalExperienceManager-EnterpriseDistribution-7.1.2.0-SDK/tomcat</jahia.deploy.targetServerDirectory>
--->
-          <jahia.deploy.targetServerDirectory>/tools/osgi/console/install</jahia.deploy.targetServerDirectory>
+
           <jahia.deploy.war.dirName>ROOT</jahia.deploy.war.dirName>
           <jahia.deploy.war.contextPath>/</jahia.deploy.war.contextPath>
           <jahia.deploy.war.servletPath>/cms</jahia.deploy.war.servletPath>
           <jahia.debug.address>socket:hostname=10.4.10.28,port=8000</jahia.debug.address>
       </properties>
   </profile>
+
+  <profile>
+            <id>deploy-osgi</id>
+	    <activation>
+	      <property>
+		<name>cq.profilegroup</name>
+		<value>fullDeploy</value>
+	      </property>
+	    </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.sling</groupId>
+                        <artifactId>maven-sling-plugin</artifactId>
+                        <version>2.1.0</version>
+                        <executions>
+                            <execution>
+                                <id>install-bundle</id>
+                                <goals>
+                                    <goal>install</goal>
+                                </goals>
+                                <configuration>
+                                    <slingUrl>http://10.4.10.20:8080</slingUrl>
+                                    <slingUrlSuffix>/tools/osgi/console/bundles</slingUrlSuffix>
+                                    <user>jahia</user>
+                                    <password>password</password>
+                                    <failOnError>true</failOnError>
+                                    <usePut>true</usePut>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+
 </profiles>
 
 
