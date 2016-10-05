@@ -94,7 +94,10 @@
       <properties>
           <jahia.deploy.targetServerType>tomcat</jahia.deploy.targetServerType>
           <jahia.deploy.targetServerVersion>7</jahia.deploy.targetServerVersion>
+          <!--
           <jahia.deploy.targetServerDirectory>/Users/jpol/Documents/WORK/JAHIA/DigitalExperienceManager-EnterpriseDistribution-7.1.2.0-SDK/tomcat</jahia.deploy.targetServerDirectory>
+-->
+          <jahia.deploy.targetServerDirectory>/tools/osgi/console/install</jahia.deploy.targetServerDirectory>
           <jahia.deploy.war.dirName>ROOT</jahia.deploy.war.dirName>
           <jahia.deploy.war.contextPath>/</jahia.deploy.war.contextPath>
           <jahia.deploy.war.servletPath>/cms</jahia.deploy.war.servletPath>
