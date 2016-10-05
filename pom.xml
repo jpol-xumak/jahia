@@ -98,7 +98,7 @@
           <jahia.deploy.war.dirName>ROOT</jahia.deploy.war.dirName>
           <jahia.deploy.war.contextPath>/</jahia.deploy.war.contextPath>
           <jahia.deploy.war.servletPath>/cms</jahia.deploy.war.servletPath>
-          <jahia.debug.address>socket:hostname=localhost,port=8000</jahia.debug.address>
+          <jahia.debug.address>socket:hostname=10.4.10.28,port=8000</jahia.debug.address>
       </properties>
   </profile>
 </profiles>
