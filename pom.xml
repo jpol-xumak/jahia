@@ -86,7 +86,7 @@
           <jahia.deploy.war.dirName>ROOT</jahia.deploy.war.dirName>
           <jahia.deploy.war.contextPath>/</jahia.deploy.war.contextPath>
           <jahia.deploy.war.servletPath>/cms</jahia.deploy.war.servletPath>
-          <jahia.debug.address>socket:hostname=10.4.10.20,port=8000</jahia.debug.address>
+          <jahia.debug.address>socket:hostname=http://10.4.10.20,port=8000</jahia.debug.address>
       </properties>
   </profile>
   <profile>
@@ -126,7 +126,7 @@
                                 </goals>
                                 <configuration>
                                     <slingUrl>http://10.4.10.20:8080</slingUrl>
-                                    <slingUrlSuffix>/tools/osgi/console/bundles</slingUrlSuffix>
+                                    <slingUrlSuffix>/tools/osgi/console/install</slingUrlSuffix>
                                     <user>jahia</user>
                                     <password>password</password>
                                     <failOnError>true</failOnError>
